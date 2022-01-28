@@ -14,7 +14,7 @@ Note that this example will create resources. Resources can be destroyed with `t
 ```hcl
 module "aci_user" {
   source  = "netascode/user/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   username         = "USER1"
   password         = "PASSWORD1"
@@ -35,6 +35,5 @@ module "aci_user" {
     }]
   }]
 }
-
 ```
 <!-- END_TF_DOCS -->

@@ -13,7 +13,7 @@ Location in GUI:
 ```hcl
 module "aci_user" {
   source  = "netascode/user/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   username         = "USER1"
   password         = "PASSWORD1"
@@ -34,7 +34,6 @@ module "aci_user" {
     }]
   }]
 }
-
 ```
 
 ## Requirements
@@ -42,13 +41,13 @@ module "aci_user" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 0.2.0 |
+| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 2.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 0.2.0 |
+| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 2.0.0 |
 
 ## Inputs
 
@@ -80,10 +79,10 @@ module "aci_user" {
 
 | Name | Type |
 |------|------|
-| [aci_rest.aaaPwdProfile](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
-| [aci_rest.aaaSshAuth](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
-| [aci_rest.aaaUser](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
-| [aci_rest.aaaUserCert](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
-| [aci_rest.aaaUserDomain](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
-| [aci_rest.aaaUserRole](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
+| [aci_rest_managed.aaaPwdProfile](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest_managed.aaaSshAuth](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest_managed.aaaUser](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest_managed.aaaUserCert](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest_managed.aaaUserDomain](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest_managed.aaaUserRole](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
 <!-- END_TF_DOCS -->

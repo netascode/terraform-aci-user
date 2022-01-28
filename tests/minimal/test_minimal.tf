@@ -5,8 +5,8 @@ terraform {
     }
 
     aci = {
-      source  = "netascode/aci"
-      version = ">=0.2.0"
+      source  = "CiscoDevNet/aci"
+      version = ">=2.0.0"
     }
   }
 }
@@ -18,7 +18,7 @@ module "main" {
   password = "PASSWORD1"
 }
 
-data "aci_rest" "aaaUser" {
+data "aci_rest_managed" "aaaUser" {
   dn = "uni/userext/user-USER1"
 
   depends_on = [module.main]
@@ -29,7 +29,7 @@ resource "test_assertions" "aaaUser" {
 
   equal "name" {
     description = "name"
-    got         = data.aci_rest.aaaUser.content.name
+    got         = data.aci_rest_managed.aaaUser.content.name
     want        = "USER1"
   }
 }

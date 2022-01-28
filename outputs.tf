@@ -1,9 +1,9 @@
 output "dn" {
-  value       = aci_rest.aaaUser.id
+  value       = aci_rest_managed.aaaUser.id
   description = "Distinguished name of `aaaUser` object."
 }
 
 output "username" {
-  value       = aci_rest.aaaUser.content.name
+  value       = aci_rest_managed.aaaUser.content.name
   description = "Username."
 }
