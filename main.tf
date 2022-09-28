@@ -6,7 +6,7 @@ locals {
         value = {
           domain_name    = domain.name
           name           = role.name
-          privilege_type = lookup(role, "privilege_type", "readPriv") == "write" ? "writePriv" : "readPriv"
+          privilege_type = role.privilege_type == "write" ? "writePriv" : "readPriv"
         }
       }
     ]

@@ -113,8 +113,8 @@ variable "domains" {
     name = string
     roles = optional(list(object({
       name           = string
-      privilege_type = optional(string)
-    })))
+      privilege_type = optional(string, "read")
+    })), [])
   }))
   default = []
 
