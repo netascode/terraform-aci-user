@@ -11,6 +11,7 @@ variable "username" {
 variable "password" {
   description = "Password."
   type        = string
+  sensitive   = true
 
   validation {
     condition     = can(regex("^.{1,256}$", var.password))
